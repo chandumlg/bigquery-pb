@@ -28,13 +28,13 @@ var_groups:
           from: inputs/rsTracks
           description: No. of days a customer was active
       - entity_var:
-          name: account_type_count
-          from: inputs/rsIdentifies
-          select: count(distinct account_type)
+          name: CHANNELMIN
+          select: MIN(CHANNEL)
+          from: inputs/rsTracks
       - entity_var:
-          name: account_type_count_2
-          from: inputs/rsIdentifies
-          select: '{{user.Var("account_type_count")}} * 2'
+          name: CHANNELMAX
+          select: MAX(CHANNEL)
+          from: inputs/rsTracks
       - entity_var:
           name: CHANNEL
           select: FIRST_VALUE(CHANNEL)

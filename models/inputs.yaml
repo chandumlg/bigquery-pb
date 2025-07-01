@@ -12,7 +12,7 @@ inputs:
         - name: ID
         - name: PHONE
     app_defaults:
-      table: rudderstacktestbq.BENCHMARKING_RUDDERSTACK__RUDDERWEBAPP.IDENTIFIES
+      table: costestimate-464006.benchmarkdata2.identifies1
       occurred_at_col: timestamp
       ids:
         - select: "ANONYMOUS_ID"
@@ -37,7 +37,7 @@ inputs:
         - name: TIMESTAMP
         - name: ANONYMOUS_ID
     app_defaults:
-      table: rudderstacktestbq.BENCHMARKING_RUDDERSTACK__RUDDERWEBAPP.TRACKS
+      table: costestimate-464006.benchmarkdata2.tracks1
       occurred_at_col: timestamp
       ids:
         - select: "ANONYMOUS_ID"
