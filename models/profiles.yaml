@@ -65,7 +65,7 @@ var_groups:
               - TIMESTAMP
       - entity_var:
           name: CONTEXT_PAGE_TITLE
-          select: FIRST_VALUE(CONTEXT_MESSAGE_ID)
+          select: FIRST_VALUE(CONTEXT_PAGE_TITLE)
           from: inputs/rsTracks
           window:
             order_by:

@@ -43,6 +43,3 @@ inputs:
         - select: "ANONYMOUS_ID"
           type: ANONYMOUS_ID
           entity: user
-        - select: "ID"
-          type: ID
-          entity: user
