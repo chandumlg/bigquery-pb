@@ -28,71 +28,71 @@ var_groups:
           from: inputs/rsTracks
           description: No. of days a customer was active
       - entity_var:
-          name: CHANNELMIN
+          name: MIN_CHANNEL
           select: MIN(CHANNEL)
           from: inputs/rsTracks
       - entity_var:
-          name: CHANNELMAX
+          name: MAX_CHANNEL
           select: MAX(CHANNEL)
           from: inputs/rsTracks
       - entity_var:
-          name: CHANNEL
+          name: FIRST_CHANNEL
           select: FIRST_VALUE(CHANNEL)
           from: inputs/rsTracks
           window:
             order_by:
               - TIMESTAMP
       - entity_var:
-          name: CONTEXT_GEO_COUNTRY
+          name: FIRST_CONTEXT_GEO_COUNTRY
           select: FIRST_VALUE(CONTEXT_GEO_COUNTRY)
           from: inputs/rsTracks
           window:
             order_by:
               - TIMESTAMP
       - entity_var:
-          name: CONTEXT_GEO_IP
+          name: FIRST_CONTEXT_GEO_IP
           select: FIRST_VALUE(CONTEXT_GEO_IP)
           from: inputs/rsTracks
           window:
             order_by:
               - TIMESTAMP
       - entity_var:
-          name: CONTEXT_MESSAGE_ID
+          name: FIRST_CONTEXT_MESSAGE_ID
           select: FIRST_VALUE(CONTEXT_MESSAGE_ID)
           from: inputs/rsTracks
           window:
             order_by:
               - TIMESTAMP
       - entity_var:
-          name: CONTEXT_PAGE_TITLE
+          name: FIRST_CONTEXT_PAGE_TITLE
           select: FIRST_VALUE(CONTEXT_PAGE_TITLE)
           from: inputs/rsTracks
           window:
             order_by:
               - TIMESTAMP
       - entity_var:
-          name: CONTEXT_PAGE_URL
+          name: FIRST_CONTEXT_PAGE_URL
           select: FIRST_VALUE(CONTEXT_PAGE_URL)
           from: inputs/rsTracks
           window:
             order_by:
               - TIMESTAMP
       - entity_var:
-          name: CONTEXT_SOURCE_ID
+          name: FIRST_CONTEXT_SOURCE_ID
           select: FIRST_VALUE(CONTEXT_SOURCE_ID)
           from: inputs/rsTracks
           window:
             order_by:
               - TIMESTAMP
       - entity_var:
-          name: CONTEXT_TRACKING_PLAN_ID
+          name: FIRST_CONTEXT_TRACKING_PLAN_ID
           select: FIRST_VALUE(CONTEXT_TRACKING_PLAN_ID)
           from: inputs/rsTracks
           window:
             order_by:
               - TIMESTAMP
       - entity_var:
-          name: CONTEXT_TRAITS_COMPANY
+          name: FIRST_CONTEXT_TRAITS_COMPANY
           select: FIRST_VALUE(CONTEXT_TRAITS_COMPANY)
           from: inputs/rsTracks
           window:
