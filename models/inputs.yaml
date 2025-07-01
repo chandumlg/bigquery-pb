@@ -1,0 +1,48 @@
+inputs:
+  - name: rsIdentifies
+    contract:
+      is_optional: false
+      is_event_stream: true
+      with_entity_ids:
+        - user
+      with_columns:
+        - name: TIMESTAMP
+        - name: EMAIL
+        - name: ANONYMOUS_ID
+        - name: ID
+        - name: PHONE
+    app_defaults:
+      table: rudderstacktestbq.BENCHMARKING_RUDDERSTACK__RUDDERWEBAPP.IDENTIFIES
+      occurred_at_col: timestamp
+      ids:
+        - select: "ANONYMOUS_ID"
+          type: ANONYMOUS_ID
+          entity: user
+        - select: "EMAIL"
+          type: EMAIL
+          entity: user
+        - select: "ID"
+          type: ID
+          entity: user
+        - select: "PHONE"
+          type: PHONE
+          entity: user
+  - name: rsTracks
+    contract:
+      is_optional: false
+      is_event_stream: false
+      with_entity_ids:
+        - user
+      with_columns:
+        - name: TIMESTAMP
+        - name: ANONYMOUS_ID
+    app_defaults:
+      table: rudderstacktestbq.BENCHMARKING_RUDDERSTACK__RUDDERWEBAPP.TRACKS
+      occurred_at_col: timestamp
+      ids:
+        - select: "ANONYMOUS_ID"
+          type: ANONYMOUS_ID
+          entity: user
+        - select: "ID"
+          type: ID
+          entity: user
